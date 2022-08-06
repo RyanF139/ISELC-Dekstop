@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="ISELC.Login.Create_Super_User"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ISELC.Login"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="440" d:DesignWidth="320"
+             MaxHeight="440" MaxWidth="320"
+             VerticalAlignment="Stretch">
+    <Grid>
+        <TextBlock Text="Welcome"
+                        Foreground="White" FontFamily="Arial" FontWeight="Bold"
+                        FontSize="15"
+                        VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Margin="40,30,0,0"/>
+
+        <materialDesign:Card Height="33" Width="240"
+                                     Background="#223665"
+                                     UniformCornerRadius="5"
+                                     VerticalAlignment="Top" HorizontalAlignment="Left"
+                                     Margin="40,98,0,0">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="User" Height="17" Width="17"
+                                         Foreground="#B3B3B3"
+                                         VerticalAlignment="Center" HorizontalAlignment="Left"
+                                         Margin="10,0,0,0"/>
+                <TextBox Height="26" Width="180" FontSize="15" Margin="15,0,0,0"
+                             x:Name="Super_User_Name" Foreground="#B3B3B3"
+                             materialDesign:HintAssist.Hint="Super User Name"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <materialDesign:Card Height="33" Width="240"
+                                     Background="#223665"
+                                     UniformCornerRadius="5"
+                                     VerticalAlignment="Top" HorizontalAlignment="Left"
+                                     Margin="40,144,0,0">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Lock" Height="17" Width="17"
+                                         Foreground="#B3B3B3"
+                                         VerticalAlignment="Center" HorizontalAlignment="Left"
+                                         Margin="10,0,0,0"/>
+                <PasswordBox Height="26" Width="180" FontSize="15" Margin="15,0,0,0"
+                             x:Name="Password" Foreground="#B3B3B3"
+                             materialDesign:HintAssist.Hint="Password"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <materialDesign:Card Height="33" Width="240"
+                                     Background="#223665"
+                                     UniformCornerRadius="5"
+                                     VerticalAlignment="Top" HorizontalAlignment="Left"
+                                     Margin="40,217,0,0">
+            <StackPanel Orientation="Horizontal">
+                <PasswordBox Height="26" Width="210
+                             " FontSize="15" Margin="15,0,0,0"
+                             x:Name="Confirm_Password" Foreground="#B3B3B3"
+                             materialDesign:HintAssist.Hint="Confirm Password"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <Button x:Name="btn_Login"
+                        Click="btn_Login_Click"
+                        Style="{StaticResource MaterialDesignPaperDarkButton}"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        Height="33" Width="240" BorderBrush="Transparent"
+                        Background="#E03851"
+                        Foreground="#FFFFFF"
+                        Content="Login"
+                        VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Margin="40,362,0,0"/>
+    </Grid>
+</UserControl>

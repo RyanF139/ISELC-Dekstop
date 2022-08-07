@@ -28,7 +28,7 @@ namespace ISELC
        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            CallMainLogin();
+            CallMainLogin();            
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
@@ -51,6 +51,13 @@ namespace ISELC
             Login.MainLogin mainLogin = new Login.MainLogin(this);
             PanelMainPanel.Children.Clear();
             PanelMainPanel.Children.Add(mainLogin);
+        }
+
+        public void CallMainApp()
+        {
+            Main_App.MainApp mainApp = new Main_App.MainApp();
+            PanelMainPanel.Children.Clear();
+            PanelMainPanel.Children.Add(mainApp);
         }
 
         public void CloseApp()

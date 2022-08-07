@@ -55,7 +55,7 @@ namespace ISELC.Login
 
         public void CallLogin()
         {
-            Login login = new Login();
+            Login login = new Login(this);
             PanelLogin.Children.Clear();
             PanelLogin.Children.Add(login);
         }
